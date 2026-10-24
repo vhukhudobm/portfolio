@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vhukhudo Innocent Mandiwana | District Court Prosecutor</title>
+  <meta name="description" content="District Court Prosecutor specialising in criminal litigation, statutory offences, financial crime and organised crime. National Prosecuting Authority, Polokwane." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f1c2e;
+      --navy-light: #1a2d47;
+      --charcoal: #1e293b;
+      --gold: #b8975a;
+      --gold-soft: #d4b87a;
+      --off-white: #f8f7f4;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--off-white);
+      color: var(--charcoal);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(15, 28, 46, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(184, 151, 90, 0.25);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 2px;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-soft) !important;
+      color: var(--navy) !important;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 9rem 2rem 5.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 50%;
+      height: 140%;
+      background: radial-gradient(ellipse, rgba(184,151,90,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid rgba(184,151,90,0.45);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5.5vw, 3.8rem);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      color: var(--white);
+    }
+
+    .hero-title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--gold-soft);
+      margin-bottom: 1.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-summary {
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .hero-meta a {
+      color: var(--gold-soft);
+      text-decoration: none;
+    }
+
+    .hero-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-meta strong {
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 0.85rem;
+    }
+
+    /* ===== ABOUT / SUMMARY ===== */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      color: var(--charcoal);
+      font-size: 1.02rem;
+    }
+
+    .about-highlights {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2.25rem;
+      border-radius: 4px;
+    }
+
+    .about-highlights h3 {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+    }
+
+    .about-highlights ul {
+      list-style: none;
+    }
+
+    .about-highlights li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .about-highlights li:last-child {
+      border-bottom: none;
+    }
+
+    .about-highlights li::before {
+      content: '▸';
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .experience {
+      background: var(--off-white);
+    }
+
+    .job {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.75rem;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .job:hover {
+      border-color: rgba(184,151,90,0.4);
+      box-shadow: 0 8px 30px rgba(15,28,46,0.06);
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .job-title {
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .job-org {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .job-dates {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .job ul {
+      padding-left: 1.15rem;
+      color: var(--charcoal);
+    }
+
+    .job li {
+      margin-bottom: 0.55rem;
+      font-size: 0.97rem;
+    }
+
+    .job li::marker {
+      color: var(--gold);
+    }
+
+    /* ===== EDUCATION ===== */
+    .education {
+      background: var(--white);
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .edu-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      background: var(--off-white);
+      transition: border-color 0.2s;
+    }
+
+    .edu-card:hover {
+      border-color: var(--gold);
+    }
+
+    .edu-degree {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .edu-inst {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-years {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===== TRAINING ===== */
+    .training {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .training .section-label {
+      color: var(--gold-soft);
+    }
+
+    .training .section-title {
+      color: var(--white);
+    }
+
+    .training .section-title::after {
+      background: var(--gold);
+    }
+
+    .training-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .training-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 3px;
+      padding: 1.15rem 1.35rem;
+      font-size: 0.95rem;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .training-item::before {
+      content: '◆';
+      color: var(--gold);
+      font-size: 0.65rem;
+      margin-top: 0.35rem;
+      flex-shrink: 0;
+    }
+
+    /* ===== COMPETENCIES ===== */
+    .competencies {
+      background: var(--off-white);
+    }
+
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .comp-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem 1.6rem;
+      text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .comp-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .comp-card h3 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .comp-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ===== REFERENCES ===== */
+    .references {
+      background: var(--white);
+    }
+
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .ref-card {
+      border-left: 3px solid var(--gold);
+      background: var(--off-white);
+      padding: 1.5rem 1.75rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .ref-name {
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .ref-role {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .ref-phone {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .contact .section-title {
+      color: var(--white);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact .section-title::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-details a {
+      color: var(--gold-soft);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-note {
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0a1420;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.75rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 1.25rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 7.5rem 1.5rem 4rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      section {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .job-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">VIM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">National Prosecuting Authority</div>
+      <h1>Vhukhudo Innocent Mandiwana</h1>
+      <p class="hero-title">District Court Prosecutor &nbsp;|&nbsp; Criminal Litigation & Investigations</p>
+      <p class="hero-summary">
+        Fifth-year prosecutor with substantial experience in South Africa’s criminal justice system. 
+        Strong focus on criminal litigation, statutory offences, financial crimes and organised crime. 
+        Currently pursuing an LLM in Criminal Law and Criminal Procedure.
+      </p>
+      <div class="hero-meta">
+        <div><strong>Location</strong><br>Polokwane, South Africa</div>
+        <div><strong>Phone</strong><br><a href="tel:+27727081219">072 708 1219</a></div>
+        <div><strong>Email</strong><br><a href="mailto:Vhukhudobm@gmail.com">Vhukhudobm@gmail.com</a></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">Professional Profile</div>
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Prosecutor in the fifth year of practice with the National Prosecuting Authority in Polokwane. 
+            Experienced in screening and preparing matters, conducting criminal trials, pre-trial conferences, 
+            guilty pleas and plea proceedings, as well as enquiries incidental to the criminal process.
+          </p>
+          <p>
+            Demonstrated proficiency in both district and regional court proceedings, with practical exposure 
+            to regional court matters and readiness to assume greater regional court responsibility. 
+            Guides investigations in collaboration with SAPS, DPCI/Hawks, Home Affairs, IPID and other agencies.
+          </p>
+          <p>
+            Additional specialised training in anti-corruption, terrorism financing, money laundering and 
+            investigative interviewing, supporting work on white-collar and commercial crime matters.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <h3>Key Focus Areas</h3>
+          <ul>
+            <li>Criminal litigation & trial advocacy</li>
+            <li>Financial crime & anti-corruption</li>
+            <li>Organised crime & statutory offences</li>
+            <li>Cross-agency investigation guidance</li>
+            <li>Evidence assessment & case preparation</li>
+            <li>Legal research & drafting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-label">Career Path</div>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3 class="job-title">District Court Prosecutor</h3>
+            <div class="job-org">National Prosecuting Authority, Polokwane</div>
+          </div>
+          <div class="job-dates">January 2023 – Present</div>
+        </div>
+        <ul>
+          <li>Conduct district and regional court proceedings, including screening and preparation of matters, pre-trial conferences, criminal trials, guilty pleas, plea proceedings and incidental enquiries.</li>
+          <li>Guide and lead criminal investigations in collaboration with SAPS, DPCI/Hawks, Home Affairs, IPID and other law enforcement agencies; provide strategic guidance on evidence collection.</li>
+          <li>Review and study criminal case dockets to determine grounds for instituting legal proceedings on behalf of the State.</li>
+          <li>Present evidence in court, examine witnesses, and advance persuasive arguments in support of the prosecution’s case.</li>
+          <li>Conduct thorough legal research on applicable principles, strategies and precedents; draft essential legal documents and reports.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div>
+            <h3 class="job-title">Aspirant Prosecutor</h3>
+            <div class="job-org">National Prosecuting Authority, Polokwane</div>
+          </div>
+          <div class="job-dates">January 2022 – December 2022</div>
+        </div>
+        <ul>
+          <li>Assisted senior prosecutors in preparing case dockets, drafting legal documents, and reviewing evidence to determine trial readiness.</li>
+          <li>Conducted legal research on statutes, precedents and case law to support trial strategies and courtroom arguments.</li>
+          <li>Observed and participated in criminal trials, gaining exposure to courtroom procedure, witness examination and trial advocacy.</li>
+          <li>Supported compilation of witness statements and preparation of exhibits to strengthen the prosecution’s case.</li>
+          <li>Worked under supervision to ensure prosecutorial decisions complied with constitutional and procedural requirements.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-label">Academic Background</div>
+      <h2 class="section-title">Qualifications</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3 class="edu-degree">Master of Laws (LLM)</h3>
+          <div class="edu-inst">Criminal Law and Criminal Procedure</div>
+          <div class="edu-inst">University of South Africa (UNISA)</div>
+          <div class="edu-years">2025 – Present &nbsp;·&nbsp; Expected 2027</div>
+        </div>
+        <div class="edu-card">
+          <h3 class="edu-degree">Bachelor of Laws (LLB)</h3>
+          <div class="edu-inst">University of Pretoria</div>
+          <div class="edu-years">2019 – 2021</div>
+        </div>
+        <div class="edu-card">
+          <h3 class="edu-degree">Bachelor of Arts in Law</h3>
+          <div class="edu-inst">Majoring in Criminology</div>
+          <div class="edu-inst">University of Pretoria</div>
+          <div class="edu-years">2017 – 2019</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="training" id="training">
+    <div class="container">
+      <div class="section-label">Continuous Development</div>
+      <h2 class="section-title">Professional Training</h2>
+      <div class="training-list">
+        <div class="training-item">Public Service Ethics — National School of Government, 2025</div>
+        <div class="training-item">Combating Terrorism Financing — International Centre for Asset Recovery, Basel Institute on Governance</div>
+        <div class="training-item">Introduction to Anti-Corruption — United Nations Office on Drugs and Crime (UNODC), 2024</div>
+        <div class="training-item">Advanced Anti-Corruption: Prevention of Corruption — UNODC, 2024</div>
+        <div class="training-item">Trade-Based Money Laundering — UNODC, 2025</div>
+        <div class="training-item">Investigative Interviewing — UNODC, 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENCIES -->
+  <section class="competencies" id="competencies">
+    <div class="container">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Core Competencies</h2>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <h3>Criminal Litigation</h3>
+          <p>Trial advocacy, evidence presentation, witness examination</p>
+        </div>
+        <div class="comp-card">
+          <h3>Cross-Agency Work</h3>
+          <p>SAPS, Hawks, IPID, Home Affairs collaboration</p>
+        </div>
+        <div class="comp-card">
+          <h3>Financial Crime</h3>
+          <p>Anti-corruption, money laundering, commercial crime</p>
+        </div>
+        <div class="comp-card">
+          <h3>Legal Research & Drafting</h3>
+          <p>Case analysis, precedents, legal documents</p>
+        </div>
+        <div class="comp-card">
+          <h3>Evidence & Forensics</h3>
+          <p>Evidence gathering, assessment & forensic analysis</p>
+        </div>
+        <div class="comp-card">
+          <h3>Investigative Skills</h3>
+          <p>Witness interviewing & examination techniques</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="references" id="references">
+    <div class="container">
+      <div class="section-label">Professional Endorsements</div>
+      <h2 class="section-title">References</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <h3 class="ref-name">Mr S Ndhlovu</h3>
+          <div class="ref-role">Head Court Control Prosecutor</div>
+          <div class="ref-phone">076 762 8697</div>
+        </div>
+        <div class="ref-card">
+          <h3 class="ref-name">Adv RC Moshabela</h3>
+          <div class="ref-role">Senior Public Prosecutor</div>
+          <div class="ref-phone">083 574 818</div>
+        </div>
+        <div class="ref-card">
+          <h3 class="ref-name">Ms GS Van Rijn</h3>
+          <div class="ref-role">Senior Magistrate</div>
+          <div class="ref-phone">082 371 9252</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold-soft);">Get in Touch</div>
+      <h2 class="section-title">Contact</h2>
+      <p style="max-width: 520px; margin: 0 auto 1rem; color: rgba(255,255,255,0.8);">
+        Available for professional enquiries relating to criminal litigation, prosecutorial practice, and related opportunities.
+      </p>
+      <div class="contact-details">
+        <div>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">PHONE</div>
+          <a href="tel:+27727081219">072 708 1219</a>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">EMAIL</div>
+          <a href="mailto:Vhukhudobm@gmail.com">Vhukhudobm@gmail.com</a>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">LOCATION</div>
+          <span style="color: var(--gold-soft);">Polokwane, South Africa</span>
+        </div>
+      </div>
+      <p class="contact-note">
+        Z83 form and full curriculum vitae available upon request.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Vhukhudo Innocent Mandiwana</strong> &nbsp;·&nbsp; District Court Prosecutor &nbsp;·&nbsp; National Prosecuting Authority
+  </footer>
+
+</body>
+</html>
